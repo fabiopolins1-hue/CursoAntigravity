@@ -27,5 +27,38 @@ Conectar GIT ao GITHUB, digitar o seguinte comando no bash ou cmd:
 confirmar com o comando:
 `git config --list`
 
+### O processo de desenvolvimento
+
+**"Como o software é feito"**
+* Programar é dar ordens extremamente detalhadas e lógicas para o computador. É como escrever uma receita de bolo passo a passo
+
+**Arquitetura básica de um software**
+
+* Front-End (A Interface): É tudo que o usuário vê, clica e interage.
+* Back-End (O Cérebro): É a cozinha do restaurante. Recebe as requisições, processa de acordo com a lógica e devolve uma resposta para a UI (User Interface);
+* Banco de Dados (A memória): É onde guardamos as informações permanentes: logins, senhas, históricos, mensagens...
+
+```mermaid
+
+flowchart LR
+    A[Front-End]
+    B[Back-End]
+    C[Banco de Dados]
+
+A --> B
+B --> C
+C --> B
+B --> A
+    
+```
+
+### Meu Primeiro Projeto Antigravity
+
+**O Contexto (O que vamos construir)**
+
+* Gerenciador de tarefas: HTML, CSS, Javascript
+
+* O Prompt para o Antigravity: 
+
 
 

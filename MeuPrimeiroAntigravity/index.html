@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Primeiro Antigravity</title>
+    <title>Meu Dia - Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>  
-    <h2>Olá, Mundo!!!</h2>
-    <p>Seja Bem Vindo</p>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Meu Dia</h1>
+            <p class="subtitle">Organize suas atividades diárias com facilidade</p>
+        </header>
+
+        <form id="task-form" class="task-form">
+            <input 
+                type="text" 
+                id="task-input" 
+                placeholder="O que você planeja fazer hoje?" 
+                autocomplete="off"
+            >
+            <button type="submit" id="add-btn" class="btn-primary">Adicionar</button>
+        </form>
+
+        <!-- Barra de Ações com Arquivo JSON -->
+        <div class="json-actions">
+            <button id="export-json-btn" type="button" class="btn-secondary" title="Salvar tarefas em um arquivo JSON no computador">
+                💾 Baixar JSON
+            </button>
+            <label for="import-json-input" class="btn-secondary" title="Carregar tarefas de um arquivo JSON">
+                📂 Importar JSON
+            </label>
+            <input type="file" id="import-json-input" accept=".json" style="display: none;">
+        </div>
+
+        <section class="task-list-container">
+            <ul id="task-list" class="task-list">
+                <!-- As tarefas serão inseridas dinamicamente pelo JavaScript -->
+            </ul>
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <p>Nenhuma tarefa pendente. Aproveite seu dia!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
