@@ -1,0 +1,211 @@
+/* Reset básico e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #f0f4f8;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* Card Principal */
+.app-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 32px 28px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+}
+
+/* Cabeçalho */
+.app-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.app-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.app-header .subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Formulário de Adição */
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+.task-form input:focus {
+    border-color: #3b82f6;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.task-form input::placeholder {
+    color: #94a3b8;
+}
+
+/* Botão Azul Adicionar */
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* Ações de Importar e Exportar JSON */
+.json-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.btn-secondary {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    border-color: #94a3b8;
+}
+
+.btn-secondary:active {
+    transform: scale(0.98);
+}
+
+/* Lista de Tarefas */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Item da Tarefa */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 12px 16px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.25s ease-out;
+}
+
+.task-item:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.task-text {
+    font-size: 0.95rem;
+    color: #334155;
+    word-break: break-word;
+    flex: 1;
+    padding-right: 12px;
+}
+
+/* Botão Vermelho Excluir */
+.btn-delete {
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    flex-shrink: 0;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+}
+
+.btn-delete:active {
+    transform: scale(0.95);
+}
+
+/* Estado Vazio */
+.empty-state {
+    text-align: center;
+    padding: 24px 10px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* Animação Suave de Entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
